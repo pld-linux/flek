@@ -62,7 +62,7 @@ Biblioteki statyczne Fleka.
 %patch0 -p1
 
 %build
-aclocal
+%{__aclocal}
 %{__autoconf}
 cp -f /usr/share/automake/config.* .
 %configure \
