@@ -77,12 +77,7 @@ autoconf
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install \
-	libdir=$RPM_BUILD_ROOT%{_libdir} \
-	includedir=$RPM_BUILD_ROOT%{_includedir} \
-	bindir=$RPM_BUILD_ROOT%{_bindir}
-
-symlinks -cs $RPM_BUILD_ROOT%{_libdir}
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 gzip -9nf README Changelog
 
