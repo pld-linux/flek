@@ -85,8 +85,8 @@ Biblioteki statyczne Fleka.
 %build
 aclocal
 autoconf
-%configure --with-fltk=%{_prefix}
-
+%configure \
+	--with-fltk=%{_prefix}
 %{__make} src
 
 %install
