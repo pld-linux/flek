@@ -7,7 +7,7 @@ License:	GPL
 Group:		X11/Libraries
 Source0:	ftp://flek.sourceforge.net/pub/%{name}/%{name}-%{version}.agenda.tar.gz
 Patch0:		%{name}-DESTDIR.patch
-URL:		http://flek.sourceforge.net
+URL:		http://flek.sourceforge.net/
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
 BuildRequires:	automake
