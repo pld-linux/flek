@@ -1,0 +1,193 @@
+diff -Nur flek-0.2.agenda/src/Makefile flek-0.2.agenda.new/src/Makefile
+--- flek-0.2.agenda/src/Makefile	Wed May 16 17:02:56 2001
++++ flek-0.2.agenda.new/src/Makefile	Fri Aug 24 13:36:35 2001
+@@ -221,116 +221,116 @@
+ 
+ flek-core-install: $(LIB_FLEK_CORE).a $(DSO_FLEK_CORE)
+ 	@echo "Installing libflek_core..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIB_NAME_FLEK_CORE)
+-	@-cp $(LIB_FLEK_CORE).a $(libdir)
+-	@-chmod 644 $(libdir)/$(LIB_NAME_FLEK_CORE).a
++	@-mkdir -p $(DESTDIR)$(libdir)
++	@rm -f $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_CORE)
++	@-cp $(LIB_FLEK_CORE).a $(DESTDIR)$(libdir)
++	@-chmod 644 $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_CORE).a
+ 	@if test -n "$(DSOEXT)"; then \
+ 		echo "Installing libflek_core DSO library."; \
+ 		if test $(DSO_FLEK_CORE) = $(DSO_NAME_FLEK_CORE).so.1; then ext=.so; else ext=.s1; fi; \
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_CORE)$$ext.1;\
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_CORE)$$ext;\
+-		cp $(DSO_FLEK_CORE) $(libdir); \
+-		chmod 755 $(libdir)/$(DSO_NAME_FLEK_CORE)$$ext.1; \
+-		ln -s $(libdir)/$(DSO_NAME_FLEK_CORE)$$ext.1 $(libdir)/$(DSO_NAME_FLEK_CORE)$$ext;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_CORE)$$ext.1;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_CORE)$$ext;\
++		cp $(DSO_FLEK_CORE) $(DESTDIR)$(libdir); \
++		chmod 755 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_CORE)$$ext.1; \
++		ln -s $(libdir)/$(DSO_NAME_FLEK_CORE)$$ext.1 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_CORE)$$ext;\
+ 	fi
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@-mkdir -p $(includedir)/Flek
+-	@-cd ../Flek/; cp $(H_FLEK_CORE) $(includedir)/Flek; cd ../src/
+-	@-chmod 755 $(includedir)/Flek
+-	@-chmod 644 $(includedir)/Flek/*
+-	@-mkdir -p $(bindir)
+-	@-chmod 755 $(bindir)
+-	cp ../flek-config $(bindir)/
++	@-mkdir -p $(DESTDIR)$(includedir)
++	@-mkdir -p $(DESTDIR)$(includedir)/Flek
++	@-cd ../Flek/; cp $(H_FLEK_CORE) $(DESTDIR)$(includedir)/Flek; cd ../src/
++	@-chmod 755 $(DESTDIR)$(includedir)/Flek
++	@-chmod 644 $(DESTDIR)$(includedir)/Flek/*
++	@-mkdir -p $(DESTDIR)$(bindir)
++	@-chmod 755 $(DESTDIR)$(bindir)
++	cp ../flek-config $(DESTDIR)$(bindir)/
+ 
+ flek-ui-install: $(LIB_FLEK_UI).a $(DSO_FLEK_UI)
+ 	@echo "Installing libflek_UI..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIB_NAME_FLEK_UI)
+-	@-cp $(LIB_FLEK_UI).a $(libdir)
+-	@-chmod 644 $(libdir)/$(LIB_NAME_FLEK_UI).a
++	@-mkdir -p $(DESTDIR)$(libdir)
++	@rm -f $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_UI)
++	@-cp $(LIB_FLEK_UI).a $(DESTDIR)$(libdir)
++	@-chmod 644 $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_UI).a
+ 	@if test -n "$(DSOEXT)"; then \
+ 		echo "Installing libflek_ui DSO library."; \
+ 		if test $(DSO_FLEK_UI) = $(DSO_NAME_FLEK_UI).so.1; then ext=.so; else ext=.s1; fi; \
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_UI)$$ext.1;\
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_UI)$$ext;\
+-		cp $(DSO_FLEK_UI) $(libdir); \
+-		chmod 755 $(libdir)/$(DSO_NAME_FLEK_UI)$$ext.1; \
+-		ln -s $(libdir)/$(DSO_NAME_FLEK_UI)$$ext.1 $(libdir)/$(DSO_NAME_FLEK_UI)$$ext;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_UI)$$ext.1;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_UI)$$ext;\
++		cp $(DSO_FLEK_UI) $(DESTDIR)$(libdir); \
++		chmod 755 $(libdir)/$(DESTDIR)$(DSO_NAME_FLEK_UI)$$ext.1; \
++		ln -s $(libdir)/$(DSO_NAME_FLEK_UI)$$ext.1 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_UI)$$ext;\
+ 	fi
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@-mkdir -p $(includedir)/Flek
+-	@-cd ../Flek/; cp $(H_FLEK_UI) $(includedir)/Flek; cd ../src/
+-	@-chmod 755 $(includedir)/Flek
+-	@-chmod 644 $(includedir)/Flek/*
++	@-mkdir -p $(DESTDIR)$(includedir)
++	@-mkdir -p $(DESTDIR)$(includedir)/Flek
++	@-cd ../Flek/; cp $(H_FLEK_UI) $(DESTDIR)$(includedir)/Flek; cd ../src/
++	@-chmod 755 $(DESTDIR)$(includedir)/Flek
++	@-chmod 644 $(DESTDIR)$(includedir)/Flek/*
+ 
+ flek-gl-install: $(LIB_FLEK_GL).a $(DSO_FLEK_GL)
+ 	@echo "Installing libflek_gl..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIB_NAME_FLEK_GL)
+-	@-cp $(LIB_FLEK_GL).a $(libdir)
+-	@-chmod 644 $(libdir)/$(LIB_NAME_FLEK_GL).a
++	@-mkdir -p $(DESTDIR)$(libdir)
++	@rm -f $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_GL)
++	@-cp $(LIB_FLEK_GL).a $(DESTDIR)$(libdir)
++	@-chmod 644 $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_GL).a
+ 	@if test -n "$(DSOEXT)"; then \
+ 		echo "Installing libflek_gl DSO library."; \
+ 		if test $(DSO_FLEK_GL) = $(DSO_NAME_FLEK_GL).so.1; then ext=.so; else ext=.s1; fi; \
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_GL)$$ext.1;\
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_GL)$$ext;\
+-		cp $(DSO_FLEK_GL) $(libdir); \
+-		chmod 755 $(libdir)/$(DSO_NAME_FLEK_GL)$$ext.1; \
+-		ln -s $(libdir)/$(DSO_NAME_FLEK_GL)$$ext.1 $(libdir)/$(DSO_NAME_FLEK_GL)$$ext;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_GL)$$ext.1;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_GL)$$ext;\
++		cp $(DSO_FLEK_GL) $(DESTDIR)$(libdir); \
++		chmod 755 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_GL)$$ext.1; \
++		ln -s $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_GL)$$ext.1 $(libdir)/$(DSO_NAME_FLEK_GL)$$ext;\
+ 	fi
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@-mkdir -p $(includedir)/Flek
+-	@-cd ../Flek/; cp $(H_FLEK_GL) $(includedir)/Flek; cd ../src/
+-	@-chmod 755 $(includedir)/Flek
+-	@-chmod 644 $(includedir)/Flek/*
++	@-mkdir -p $(DESTDIR)$(includedir)
++	@-mkdir -p $(DESTDIR)$(includedir)/Flek
++	@-cd ../Flek/; cp $(H_FLEK_GL) $(DESTDIR)$(includedir)/Flek; cd ../src/
++	@-chmod 755 $(DESTDIR)$(includedir)/Flek
++	@-chmod 644 $(DESTDIR)$(includedir)/Flek/*
+ 
+ flek-xml-install: $(LIB_FLEK_XML).a $(DSO_FLEK_XML)
+ 	@echo "Installing libflek_xml..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIB_NAME_FLEK_XML)
+-	@-cp $(LIB_FLEK_XML).a $(libdir)
+-	@-chmod 644 $(libdir)/$(LIB_NAME_FLEK_XML).a
++	@-mkdir -p $(DESTDIR)$(libdir)
++	@rm -f $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_XML)
++	@-cp $(LIB_FLEK_XML).a $(DESTDIR)$(libdir)
++	@-chmod 644 $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_XML).a
+ 	@if test -n "$(DSOEXT)"; then \
+ 		echo "Installing libflek_xml DSO library."; \
+ 		if test $(DSO_FLEK_XML) = $(DSO_NAME_FLEK_XML).so.1; then ext=.so; else ext=.s1; fi; \
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_XML)$$ext.1;\
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_XML)$$ext;\
+-		cp $(DSO_FLEK_XML) $(libdir); \
+-		chmod 755 $(libdir)/$(DSO_NAME_FLEK_XML)$$ext.1; \
+-		ln -s $(libdir)/$(DSO_NAME_FLEK_XML)$$ext.1 $(libdir)/$(DSO_NAME_FLEK_XML)$$ext;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_XML)$$ext.1;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_XML)$$ext;\
++		cp $(DSO_FLEK_XML) $(DESTDIR)$(libdir); \
++		chmod 755 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_XML)$$ext.1; \
++		ln -s $(libdir)/$(DSO_NAME_FLEK_XML)$$ext.1 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_XML)$$ext;\
+ 	fi
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@-mkdir -p $(includedir)/Flek
+-	@-cd ../Flek/; cp $(H_FLEK_XML) $(includedir)/Flek; cd ../src/
+-	@-chmod 755 $(includedir)/Flek
+-	@-chmod 644 $(includedir)/Flek/*
++	@-mkdir -p $(DESTDIR)$(includedir)
++	@-mkdir -p $(DESTDIR)$(includedir)/Flek
++	@-cd ../Flek/; cp $(H_FLEK_XML) $(DESTDIR)$(includedir)/Flek; cd ../src/
++	@-chmod 755 $(DESTDIR)$(includedir)/Flek
++	@-chmod 644 $(DESTDIR)$(includedir)/Flek/*
+ 
+ flek-jpeg-install: $(LIB_FLEK_JPEG).a $(DSO_FLEK_JPEG)
+ 	@echo "Installing libflek_jpeg..."
+-	@-mkdir -p $(libdir)
+-	@rm -f $(libdir)/$(LIB_NAME_FLEK_JPEG)
+-	@-cp $(LIB_FLEK_JPEG).a $(libdir)
+-	@-chmod 644 $(libdir)/$(LIB_NAME_FLEK_JPEG).a
++	@-mkdir -p $(DESTDIR)$(libdir)
++	@rm -f $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_JPEG)
++	@-cp $(LIB_FLEK_JPEG).a $(DESTDIR)$(libdir)
++	@-chmod 644 $(DESTDIR)$(libdir)/$(LIB_NAME_FLEK_JPEG).a
+ 	@if test -n "$(DSOEXT)"; then \
+ 		echo "Installing libflek_jpeg DSO library."; \
+ 		if test $(DSO_FLEK_JPEG) = $(DSO_NAME_FLEK_JPEG).so.1; then ext=.so; else ext=.s1; fi; \
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext.1;\
+-		rm -f $(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext;\
+-		cp $(DSO_FLEK_JPEG) $(libdir); \
+-		chmod 755 $(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext.1; \
+-		ln -s $(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext.1 $(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext.1;\
++		rm -f $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext;\
++		cp $(DSO_FLEK_JPEG) $(DESTDIR)$(libdir); \
++		chmod 755 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext.1; \
++		ln -s $(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext.1 $(DESTDIR)$(libdir)/$(DSO_NAME_FLEK_JPEG)$$ext;\
+ 	fi
+ 	@echo "Installing include files..."
+-	@-mkdir -p $(includedir)
+-	@-mkdir -p $(includedir)/Flek
+-	@-cd ../Flek/; cp $(H_FLEK_JPEG) $(includedir)/Flek; cd ../src/
+-	@-chmod 755 $(includedir)/Flek
+-	@-chmod 644 $(includedir)/Flek/*
++	@-mkdir -p $(DESTDIR)$(includedir)
++	@-mkdir -p $(DESTDIR)$(includedir)/Flek
++	@-cd ../Flek/; cp $(H_FLEK_JPEG) $(DESTDIR)$(includedir)/Flek; cd ../src/
++	@-chmod 755 $(DESTDIR)$(includedir)/Flek
++	@-chmod 644 $(DESTDIR)$(includedir)/Flek/*
+ 
+ ################################################################
+ 
