@@ -15,7 +15,6 @@ BuildRequires:	fltk-devel >= 1.0.11-3
 BuildRequires:	libjpeg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		_prefix		/usr/X11R6
 
 %description
 Flek hopes to provide the same layer of functionality for Fltk that
