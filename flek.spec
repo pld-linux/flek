@@ -6,6 +6,7 @@ Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	ftp://flek.sourceforge.net/pub/%{name}/%{name}-%{version}.agenda.tar.gz
+# Source0-md5:	16ead4da819c0154f084a000b5ee19bf
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://flek.sourceforge.net/
 BuildRequires:	OpenGL-devel
