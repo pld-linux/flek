@@ -18,11 +18,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Flek hopes to provide the same layer of functionality for Fltk that
-Gnome and KDE do for the Gtk and Qt toolkits, respectively.
+GNOME and KDE do for the Gtk and Qt toolkits, respectively.
 Applications written with Flek should work cooperatively with
-applications written in either Gnome or KDE. Flek does not necessarily
+applications written in either GNOME or KDE. Flek does not necessarily
 intend to become a self contained desktop environment and we don't
-plan on duplicating the work of either Gnome or KDE in this regard.
+plan on duplicating the work of either GNOME or KDE in this regard.
 Aren't there enough IRC clients? ;-)
 
 %description -l pl
