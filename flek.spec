@@ -18,7 +18,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Flek hopes to provide the same layer of functionality for Fltk that
-GNOME and KDE do for the Gtk and Qt toolkits, respectively.
+GNOME and KDE do for the GTK+ and Qt toolkits, respectively.
 Applications written with Flek should work cooperatively with
 applications written in either GNOME or KDE. Flek does not necessarily
 intend to become a self contained desktop environment and we don't
@@ -27,7 +27,7 @@ Aren't there enough IRC clients? ;-)
 
 %description -l pl
 Flek ma zapewniæ ten sam poziom funkcjonalno¶ci dla Fltk, co GNOME i
-KDE dla Gtk i Qt. Aplikacje korzystaj±ce z Fleka powinny wspó³pracowaæ
+KDE dla GTK+ i Qt. Aplikacje korzystaj±ce z Fleka powinny wspó³pracowaæ
 z aplikacjami pisanymi dla GNOME lub KDE. Flek nie ma koniecznie
 zostaæ samodzielnym ¶rodowiskiem desktopu i nie jest planowane, by
 powiela³ pracê GNOME lub KDE w tym zakresie.
