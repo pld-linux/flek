@@ -75,8 +75,6 @@ install -d $RPM_BUILD_ROOT
 
 %{__make} install DESTDIR=$RPM_BUILD_ROOT
 
-gzip -9nf README Changelog
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -85,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README Changelog
 %attr(755,root,root) %{_libdir}/lib*.so.*
 
 %files devel
