@@ -2,7 +2,7 @@ Summary:	High level cross-platform "environment" libraries based on Fltk
 Summary(pl):	Wysykopoziomowe miêdzyplatformowe biblioteki "¶rodowiskowe" bazuj±ce na Fltk
 Name:		flek
 Version:	0.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		X11/Libraries
 Source0:	ftp://flek.sourceforge.net/pub/%{name}/%{name}-%{version}.agenda.tar.gz
