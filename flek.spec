@@ -12,6 +12,7 @@ Group(pt_BR):	X11/Bibliotecas
 Group(ru):	X11/Библиотеки
 Group(uk):	X11/Б╕бл╕отеки
 Source0:	ftp://flek.sourceforge.net/pub/%{name}/%{name}-%{version}.agenda.tar.gz
+Patch0:	%{name}-DESTDIR.patch
 URL:		http://flek.sourceforge.net
 BuildRequires:	OpenGL-devel
 BuildRequires:	autoconf
@@ -63,6 +64,7 @@ Flek static libraries.
 
 %prep
 %setup  -q -n %{name}-%{version}.agenda
+%patch0 -p1
 
 %build
 aclocal
