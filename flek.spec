@@ -16,7 +16,6 @@ BuildRequires:	fltk-devel >= 1.0.11-3
 BuildRequires:	libjpeg-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-
 %description
 Flek hopes to provide the same layer of functionality for Fltk that
 Gnome and KDE do for the Gtk and Qt toolkits, respectively.
@@ -73,7 +72,8 @@ cp -f /usr/share/automake/config.* .
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
