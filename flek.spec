@@ -64,6 +64,7 @@ Biblioteki statyczne Fleka.
 %build
 aclocal
 autoconf
+cp -f /usr/share/automake/config.* .
 %configure \
 	--with-fltk=%{_prefix}
 %{__make} src
