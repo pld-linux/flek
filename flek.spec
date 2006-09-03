@@ -5,7 +5,7 @@ Version:	0.2
 Release:	4
 License:	GPL
 Group:		X11/Libraries
-Source0:	ftp://flek.sourceforge.net/pub/%{name}/%{name}-%{version}.agenda.tar.gz
+Source0:	ftp://flek.sourceforge.net/pub/flek/%{name}-%{version}.agenda.tar.gz
 # Source0-md5:	16ead4da819c0154f084a000b5ee19bf
 Patch0:		%{name}-DESTDIR.patch
 URL:		http://flek.sourceforge.net/
@@ -27,16 +27,16 @@ Aren't there enough IRC clients? ;-)
 
 %description -l pl
 Flek ma zapewniæ ten sam poziom funkcjonalno¶ci dla Fltk, co GNOME i
-KDE dla GTK+ i Qt. Aplikacje korzystaj±ce z Fleka powinny wspó³pracowaæ
-z aplikacjami pisanymi dla GNOME lub KDE. Flek nie ma koniecznie
-zostaæ samodzielnym ¶rodowiskiem desktopu i nie jest planowane, by
-powiela³ pracê GNOME lub KDE w tym zakresie.
+KDE dla GTK+ i Qt. Aplikacje korzystaj±ce z Fleka powinny
+wspó³pracowaæ z aplikacjami pisanymi dla GNOME lub KDE. Flek nie ma
+koniecznie zostaæ samodzielnym ¶rodowiskiem desktopu i nie jest
+planowane, by powiela³ pracê GNOME lub KDE w tym zakresie.
 
 %package devel
 Summary:	Flek header files and development documentation
 Summary(pl):	Pliki nag³ówkowe i dokumentacja programisty Fleka
 Group:		X11/Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Flek header files and development documentation.
@@ -48,7 +48,7 @@ Pliki nag³ówkowe i dokumentacja programisty Fleka.
 Summary:	Flek static libraries
 Summary(pl):	Biblioteki statyczne Fleka
 Group:		X11/Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Flek static libraries.
