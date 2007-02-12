@@ -1,5 +1,5 @@
 Summary:	High level cross-platform "environment" libraries based on Fltk
-Summary(pl):	Wysykopoziomowe miêdzyplatformowe biblioteki "¶rodowiskowe" bazuj±ce na Fltk
+Summary(pl.UTF-8):   Wysykopoziomowe miÄ™dzyplatformowe biblioteki "Å›rodowiskowe" bazujÄ…ce na Fltk
 Name:		flek
 Version:	0.2
 Release:	4
@@ -25,35 +25,35 @@ intend to become a self contained desktop environment and we don't
 plan on duplicating the work of either GNOME or KDE in this regard.
 Aren't there enough IRC clients? ;-)
 
-%description -l pl
-Flek ma zapewniæ ten sam poziom funkcjonalno¶ci dla Fltk, co GNOME i
-KDE dla GTK+ i Qt. Aplikacje korzystaj±ce z Fleka powinny
-wspó³pracowaæ z aplikacjami pisanymi dla GNOME lub KDE. Flek nie ma
-koniecznie zostaæ samodzielnym ¶rodowiskiem desktopu i nie jest
-planowane, by powiela³ pracê GNOME lub KDE w tym zakresie.
+%description -l pl.UTF-8
+Flek ma zapewniÄ‡ ten sam poziom funkcjonalnoÅ›ci dla Fltk, co GNOME i
+KDE dla GTK+ i Qt. Aplikacje korzystajÄ…ce z Fleka powinny
+wspÃ³Å‚pracowaÄ‡ z aplikacjami pisanymi dla GNOME lub KDE. Flek nie ma
+koniecznie zostaÄ‡ samodzielnym Å›rodowiskiem desktopu i nie jest
+planowane, by powielaÅ‚ pracÄ™ GNOME lub KDE w tym zakresie.
 
 %package devel
 Summary:	Flek header files and development documentation
-Summary(pl):	Pliki nag³ówkowe i dokumentacja programisty Fleka
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe i dokumentacja programisty Fleka
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Flek header files and development documentation.
 
-%description devel -l pl
-Pliki nag³ówkowe i dokumentacja programisty Fleka.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe i dokumentacja programisty Fleka.
 
 %package static
 Summary:	Flek static libraries
-Summary(pl):	Biblioteki statyczne Fleka
+Summary(pl.UTF-8):   Biblioteki statyczne Fleka
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Flek static libraries.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteki statyczne Fleka.
 
 %prep
