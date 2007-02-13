@@ -1,5 +1,5 @@
 Summary:	High level cross-platform "environment" libraries based on Fltk
-Summary(pl.UTF-8):   Wysykopoziomowe międzyplatformowe biblioteki "środowiskowe" bazujące na Fltk
+Summary(pl.UTF-8):	Wysykopoziomowe międzyplatformowe biblioteki "środowiskowe" bazujące na Fltk
 Name:		flek
 Version:	0.2
 Release:	4
@@ -34,7 +34,7 @@ planowane, by powielał pracę GNOME lub KDE w tym zakresie.
 
 %package devel
 Summary:	Flek header files and development documentation
-Summary(pl.UTF-8):   Pliki nagłówkowe i dokumentacja programisty Fleka
+Summary(pl.UTF-8):	Pliki nagłówkowe i dokumentacja programisty Fleka
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -46,7 +46,7 @@ Pliki nagłówkowe i dokumentacja programisty Fleka.
 
 %package static
 Summary:	Flek static libraries
-Summary(pl.UTF-8):   Biblioteki statyczne Fleka
+Summary(pl.UTF-8):	Biblioteki statyczne Fleka
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
